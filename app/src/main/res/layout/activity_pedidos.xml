@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pedidos">
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingTop="50dp"
+        app:contentPaddingBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_marginTop="16dp"
+                android:text="Nombre cliente: Marcos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvNumero"
+                android:layout_marginTop="16dp"
+                android:text="Numero Cliente: 12356"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvProducto"
+                android:layout_marginTop="16dp"
+                android:text="Producto: Laptop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvCiudad"
+                android:layout_marginTop="16dp"
+                android:text="Lima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDireccion"
+                android:layout_marginTop="16dp"
+                android:text="Av. 123 Hunacayo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginBottom="16dp"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <ImageButton
+            android:id="@+id/imbWsp"
+            android:src="@drawable/ic_wsp"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imbSms"
+            android:src="@drawable/ic_sms"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:id="@+id/imbMap"
+            android:src="@drawable/ic_map"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
