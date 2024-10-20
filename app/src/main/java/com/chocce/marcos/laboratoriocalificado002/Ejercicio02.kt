@@ -10,6 +10,13 @@ import com.chocce.marcos.laboratoriocalificado002.databinding.ActivityEjercicio0
 
 class Ejercicio02 : AppCompatActivity() {
 
+    // Definir las constantes para las claves
+    private val NAME_KEY = "NAME_KEY"
+    private val PHONE_KEY = "PHONE_KEY"
+    private val PRODUCT_KEY = "PRODUCT_KEY"
+    private val CITY_KEY = "CITY_KEY"
+    private val ADDRESS_KEY = "ADDRESS_KEY"
+
     private lateinit var binding: ActivityEjercicio02Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,11 +58,11 @@ class Ejercicio02 : AppCompatActivity() {
 
         // Crear el intent para pasar los datos a PedidoActivity
         val intent = Intent(this, Pedidos::class.java)
-        intent.putExtra("nombreCliente", nombreCliente)
-        intent.putExtra("numeroCliente", numeroCliente)
-        intent.putExtra("producto", producto)
-        intent.putExtra("ciudad", ciudad)
-        intent.putExtra("direccion", direccion)
+        intent.putExtra(NAME_KEY, nombreCliente)
+        intent.putExtra(PHONE_KEY, numeroCliente)
+        intent.putExtra(PRODUCT_KEY, producto)
+        intent.putExtra(CITY_KEY, ciudad)
+        intent.putExtra(ADDRESS_KEY, direccion)
 
         // Iniciar la actividad PedidoActivity
         startActivity(intent)

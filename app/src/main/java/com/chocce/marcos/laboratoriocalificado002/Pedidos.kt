@@ -11,13 +11,14 @@ import com.chocce.marcos.laboratoriocalificado002.databinding.ActivityPedidosBin
 
 class Pedidos : AppCompatActivity() {
 
-    private lateinit var binding: ActivityPedidosBinding
-
+    // Definir las mismas constantes usadas en Ejercicio02
     private val NAME_KEY = "NAME_KEY"
     private val PHONE_KEY = "PHONE_KEY"
     private val PRODUCT_KEY = "PRODUCT_KEY"
     private val CITY_KEY = "CITY_KEY"
     private val ADDRESS_KEY = "ADDRESS_KEY"
+
+    private lateinit var binding: ActivityPedidosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +50,7 @@ class Pedidos : AppCompatActivity() {
             val city = bundle.getString(CITY_KEY)
             val address = bundle.getString(ADDRESS_KEY)
 
+            // Mostrar los valores en los TextViews
             binding.tvName.text = "Nombre cliente: $name"
             binding.tvNumero.text = "Número Cliente: $phone"
             binding.tvProducto.text = "Producto: $product"
